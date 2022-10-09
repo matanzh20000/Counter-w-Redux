@@ -5,9 +5,9 @@ import { counterActions } from "../store";
 import { useSelector, useDispatch } from "react-redux";
 
 const Counter = () => {
-  const counter = useSelector((state) => state.counter);
+  const counter = useSelector((state) => state.counter.counter);
   const dispatch = useDispatch();
-  const toggle = useSelector((state) => state.showCounter)
+  const toggle = useSelector((state) => state.counter.showCounter)
 
   const incrementHandler = () => {
     dispatch(counterActions.increment());
